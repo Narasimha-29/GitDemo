@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Failed suite [Suite]]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="GoingWithTestNG(failed)(failed)">
+    <groups>
+      <run>
+        <include name="Purchase"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="ProjectMaven.SeleniumWebDriverDesign.Test.GoingWithTestNGFrameWork">
+        <methods>
+          <include name="LaunchApplication"/>
+          <include name="ClosingBrowswe"/>
+          <include name="submitAOrder"/>
+        </methods>
+      </class> <!-- ProjectMaven.SeleniumWebDriverDesign.Test.GoingWithTestNGFrameWork -->
+    </classes>
+  </test> <!-- GoingWithTestNG(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Suite]] -->

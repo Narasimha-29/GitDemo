@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>ProjectMaven</groupId>
+  <artifactId>SeleniumWebDriverDesign</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+  <name>SeleniumWebDriverDesign</name>
+  <url>http://www.example.com</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+    <maven.compiler.release>17</maven.compiler.release>
+  </properties>
+  
+  <profiles>
+    <profile>
+      <id>CucumberTest</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.0.0</version>
+            <configuration>
+              <includes>
+                <include>**/TestNGTestRunner.java</include>
+              </includes>
+            </configuration>
+            <dependencies>
+              <dependency>
+                <groupId>org.apache.maven.surefire</groupId>
+                <artifactId>surefire-testng</artifactId>
+                <version>3.0.0</version>
+              </dependency>
+            </dependencies>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+      
+    <profile>
+      <id>Regression</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.0.0</version>
+            <configuration>
+              <suiteXmlFiles>
+                <suiteXmlFile>testSuites/testng.xml</suiteXmlFile>
+              </suiteXmlFiles>
+            </configuration>
+            <dependencies>
+              <dependency>
+                <groupId>org.apache.maven.surefire</groupId>
+                <artifactId>surefire-testng</artifactId>
+                <version>3.0.0</version>
+              </dependency>
+            </dependencies>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+      
+    <profile>
+      <id>Purchase</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.0.0</version>
+            <configuration>
+              <suiteXmlFiles>
+                <suiteXmlFile>testSuites/Purchase.xml</suiteXmlFile>
+              </suiteXmlFiles>
+            </configuration>
+            <dependencies>
+              <dependency>
+                <groupId>org.apache.maven.surefire</groupId>
+                <artifactId>surefire-testng</artifactId>
+                <version>3.0.0</version>
+              </dependency>
+            </dependencies>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <profile>
+      <id>ErrorHandlingTests</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.0.0</version>
+            <configuration>
+              <suiteXmlFiles>
+                <suiteXmlFile>testSuites/ErrorHandlingTests.xml</suiteXmlFile>
+              </suiteXmlFiles>
+            </configuration>
+            <dependencies>
+              <dependency>
+                <groupId>org.apache.maven.surefire</groupId>
+                <artifactId>surefire-testng</artifactId>
+                <version>3.0.0</version>
+              </dependency>
+            </dependencies>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.junit</groupId>
+        <artifactId>junit-bom</artifactId>
+        <version>5.11.0</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>4.45.0</version>
+      <scope>compile</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>io.github.bonigarcia</groupId>
+      <artifactId>webdrivermanager</artifactId>
+      <version>5.6.3</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>7.12.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-java</artifactId>
+      <version>7.34.4</version>
+    </dependency>
+
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-testng</artifactId>
+      <version>7.34.4</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>2.0.13</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>tools.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>3.2.1</version>
+      <scope>compile</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>com.aventstack</groupId>
+      <artifactId>extentreports</artifactId>
+      <version>5.1.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-params</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>ProjectMaven</groupId>
+      <artifactId>ExtendReports</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <!-- maven-surefire-plugin has been removed from here so profile configurations work seamlessly -->
+      <plugin>
+        <artifactId>maven-clean-plugin</artifactId>
+        <version>3.4.0</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>3.3.1</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.13.0</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.4.2</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-install-plugin</artifactId>
+        <version>3.1.2</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>3.1.2</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>3.12.1</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>3.6.1</version>
+      </plugin>
+    </plugins>
+  </build>
+</project>

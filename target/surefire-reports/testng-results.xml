@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-07-26T15:49:42 IST" name="Suite" finished-at="2026-07-26T15:50:01 IST" duration-ms="19335">
+    <groups>
+      <group name="ErrorHandling">
+        <method signature="ErrorValidation.submitOrder()[pri:0, instance:ProjectMaven.SeleniumWebDriverDesign.Test.ErrorValidation@6e20b53a]" name="submitOrder" class="ProjectMaven.SeleniumWebDriverDesign.Test.ErrorValidation"/>
+      </group> <!-- ErrorHandling -->
+      <group name="Purchase">
+        <method signature="GoingWithTestNGFrameWork.submitAOrder(java.util.HashMap)[pri:0, instance:ProjectMaven.SeleniumWebDriverDesign.Test.GoingWithTestNGFrameWork@3c130745]" name="submitAOrder" class="ProjectMaven.SeleniumWebDriverDesign.Test.GoingWithTestNGFrameWork"/>
+      </group> <!-- Purchase -->
+    </groups>
+    <test started-at="2026-07-26T15:49:42 IST" name="ErrorValidation" finished-at="2026-07-26T15:49:48 IST" duration-ms="5857">
+      <class name="ProjectMaven.SeleniumWebDriverDesign.Test.ErrorValidation">
+        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:ProjectMaven.SeleniumWebDriverDesign.Test.ErrorValidation@6e20b53a]" started-at="2026-07-26T15:49:42 IST" name="LaunchApplication" finished-at="2026-07-26T15:49:47 IST" duration-ms="5057" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchApplication -->
+        <test-method signature="submitOrder()[pri:0, instance:ProjectMaven.SeleniumWebDriverDesign.Test.ErrorValidation@6e20b53a]" started-at="2026-07-26T15:49:47 IST" name="submitOrder" finished-at="2026-07-26T15:49:48 IST" duration-ms="571" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="ClosingBrowswe()[pri:0, instance:ProjectMaven.SeleniumWebDriverDesign.Test.ErrorValidation@6e20b53a]" started-at="2026-07-26T15:49:48 IST" name="ClosingBrowswe" finished-at="2026-07-26T15:49:48 IST" duration-ms="182" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClosingBrowswe -->
+      </class> <!-- ProjectMaven.SeleniumWebDriverDesign.Test.ErrorValidation -->
+    </test> <!-- ErrorValidation -->
+    <test started-at="2026-07-26T15:49:42 IST" name="GoingWithTestNG" finished-at="2026-07-26T15:50:01 IST" duration-ms="19335">
+      <class name="ProjectMaven.SeleniumWebDriverDesign.Test.GoingWithTestNGFrameWork">
+        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:ProjectMaven.SeleniumWebDriverDesign.Test.GoingWithTestNGFrameWork@3c130745]" started-at="2026-07-26T15:49:42 IST" name="LaunchApplication" finished-at="2026-07-26T15:49:47 IST" duration-ms="4602" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchApplication -->
+        <test-method signature="submitAOrder(java.util.HashMap)[pri:0, instance:ProjectMaven.SeleniumWebDriverDesign.Test.GoingWithTestNGFrameWork@3c130745]" started-at="2026-07-26T15:49:47 IST" name="submitAOrder" data-provider="getData" finished-at="2026-07-26T15:49:56 IST" duration-ms="9476" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Product=ZARA COAT 3, password=Narasimha@123, email=y19ec1367@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitAOrder -->
+        <test-method is-config="true" signature="ClosingBrowswe()[pri:0, instance:ProjectMaven.SeleniumWebDriverDesign.Test.GoingWithTestNGFrameWork@3c130745]" started-at="2026-07-26T15:49:56 IST" name="ClosingBrowswe" finished-at="2026-07-26T15:49:57 IST" duration-ms="991" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClosingBrowswe -->
+        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:ProjectMaven.SeleniumWebDriverDesign.Test.GoingWithTestNGFrameWork@3c130745]" started-at="2026-07-26T15:49:57 IST" name="LaunchApplication" finished-at="2026-07-26T15:50:00 IST" duration-ms="2829" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchApplication -->
+        <test-method signature="OrdersHistory()[pri:0, instance:ProjectMaven.SeleniumWebDriverDesign.Test.GoingWithTestNGFrameWork@3c130745]" started-at="2026-07-26T15:50:00 IST" name="OrdersHistory" finished-at="2026-07-26T15:50:01 IST" depends-on-methods="ProjectMaven.SeleniumWebDriverDesign.Test.GoingWithTestNGFrameWork.submitAOrder" duration-ms="836" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OrdersHistory -->
+        <test-method is-config="true" signature="ClosingBrowswe()[pri:0, instance:ProjectMaven.SeleniumWebDriverDesign.Test.GoingWithTestNGFrameWork@3c130745]" started-at="2026-07-26T15:50:01 IST" name="ClosingBrowswe" finished-at="2026-07-26T15:50:01 IST" duration-ms="230" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClosingBrowswe -->
+      </class> <!-- ProjectMaven.SeleniumWebDriverDesign.Test.GoingWithTestNGFrameWork -->
+    </test> <!-- GoingWithTestNG -->
+  </suite> <!-- Suite -->
+</testng-results>

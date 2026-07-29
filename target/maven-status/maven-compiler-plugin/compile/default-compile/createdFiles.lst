@@ -1,0 +1,7 @@
+SeleniumWebDriverDesign\AbstractComponents\AbstractComponent.class
+ProjectMaven\SeleniumWebDriverDesign\PageObjects\ConfirmationPage.class
+ProjectMaven\SeleniumWebDriverDesign\PageObjects\CartPage.class
+ProjectMaven\SeleniumWebDriverDesign\PageObjects\ProductCatalog.class
+ProjectMaven\SeleniumWebDriverDesign\PageObjects\CheckOutPage.class
+ProjectMaven\SeleniumWebDriverDesign\PageObjects\LandingPage.class
+ProjectMaven\SeleniumWebDriverDesign\PageObjects\OrdersPage.class
