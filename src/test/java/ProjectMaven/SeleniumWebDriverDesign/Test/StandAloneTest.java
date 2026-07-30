@@ -59,6 +59,7 @@ public class StandAloneTest {
 		
 		String Text = driver.findElement(By.cssSelector(".hero-primary")).getText();
 		Assert.assertTrue(Text.equalsIgnoreCase("THANKYOU FOR THE ORDER."));
+		System.out.println("Test Cases Passed Successfully");
 		
 		driver.close();
 
